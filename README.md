@@ -4,6 +4,7 @@
 ## 食用方法
  - 打开项目
  - 在项目maven中添加https://github.com/go-cqhttp/java 项目
+ - 两个项目clone并执行mvn clean install
  - 如果出现未找到类的情况请替换lombok源
   ```xml
             <dependency>
