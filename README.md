@@ -1,2 +1,2 @@
-# Minecraft-QQ机器人
+# Minecraft-QQbot
 食用方法
