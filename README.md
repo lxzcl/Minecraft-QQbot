@@ -1,2 +1,15 @@
 # Minecraft-QQbot
-食用方法
+ > 基于go-cqhttp/java的QQ机器人应用
+
+## 食用方法
+ - 在maven中添加https://github.com/go-cqhttp/java
+ - 如果出现未找到类的情况请替换lombok源
+  ```xml
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.20</version>
+                <scope>provided</scope>
+            </dependency>
+ ```
+            
