@@ -18,7 +18,7 @@ public class json {
         try {
             /* 以GET方法获取json数据 */
             CloseableHttpClient httpClient = new DefaultHttpClient();
-            HttpGet httpGet = new HttpGet("http://127.0.0.1/json.php?host=mymc.xyz&port=25565");
+            HttpGet httpGet = new HttpGet("http://192.168.3.7/json.php?host=mymc.xyz&port=25565");
             HttpResponse response = httpClient.execute(httpGet);
             HttpEntity entity = response.getEntity();
             if (entity != null) {
@@ -35,9 +35,12 @@ public class json {
                 //ipv4,6地址
                 address ip=new address();
                 address6 ip6=new address6();
+                cpu c=new cpu();
                 String re = "服务器状态：" + status + "\n" +
                         "服务器在线人数：" + (String) jsonObject.getJSONObject("players").getString("online") + "\n" +
                         "服务器延时：" + (int) ping + "ms" + "\n"+
+                        c.cpu()+"\n"+
+                        c.Mem()+"\n"+
                         ip.add()+ip6.add();
                 log.info(re);
                 return re;

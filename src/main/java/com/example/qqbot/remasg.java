@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class remasg {
 
+
     @GroupMessageHandler(groupIds = {756181314}, regex = "^状态$")
     public void talk(Group group, Member member) throws Exception {
         log.info(member+"发送：状态");
@@ -40,9 +41,10 @@ public class remasg {
     public void talktest(Group group, Member member) throws Exception {
         log.info(member+"发送：状态");
         MessageChain mc = new MessageChain();
+
         json x=new json();
         mc.at(member.getUserId()).text("\n")
-                .text(x.Json());
+                .text(x.Json()).text("\n");
         group.sendMessage(mc);
         log.info("回复成功");
     }

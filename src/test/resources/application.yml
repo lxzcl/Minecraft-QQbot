@@ -1,4 +1,0 @@
-bot:
-  botName: xxx
-  websocketUrl: ws://192.168.1.105:8080
-  accessToken:
